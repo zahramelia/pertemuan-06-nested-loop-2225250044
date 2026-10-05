@@ -1,51 +1,44 @@
 # Pertemuan 06 Nested Loop Python
 
-**Nama:** Zahra Amelia  
-**NIM:** 2225250044  
-**Kelas:** S1 Pendidikan Matematika
+Nama: Zahra Amelia  
+NIM: 2225250044  
+Kelas: S1 Pendidikan Matematika
 
 ## Tujuan
 
-- Memahami penggunaan nested loop dalam Python.
-- Membuat pola menggunakan nested loop.
-- Menggunakan accumulator dan counter dalam program.
-- Menghitung dan menampilkan hasil dari perulangan bersarang.
+Menggunakan nested loop, pola, akumulasi, dan pencacahan.
 
-## Cara Menjalankan Program
+## Cara Menjalankan
 
 Jalankan program dengan perintah:
 
 ```bash
-python tugas/tabel_perkalian_dan_statistik.py
+python3 tugas/tabel_perkalian_dan_statistik.py
 ```
+
 ## Algoritma Tugas 3
 
-1. Input bilangan bulat positif `n`.
-2. Jika `n <= 0`, program meminta input ulang sampai `n` bernilai positif.
-3. Inisialisasi `total_semua = 0` dan `count_genap = 0`.
-4. Gunakan loop luar untuk mengatur baris `i` dari 1 sampai `n`.
-5. Pada setiap baris, inisialisasi `total_baris = 0`.
-6. Gunakan loop dalam untuk mengatur kolom `j` dari 1 sampai `n`.
-7. Hitung `hasil = i * j`.
-8. Tambahkan `hasil` ke `total_baris` dan `total_semua`.
-9. Jika `hasil` genap, tambahkan `count_genap` sebanyak 1.
-10. Tampilkan jumlah setiap baris.
-11. Setelah semua perulangan selesai, tampilkan total seluruh hasil dan banyak hasil genap.
+- **Loop luar** digunakan untuk mengatur baris tabel dari 1 sampai n.
+- **Loop dalam** digunakan untuk mengatur kolom tabel dari 1 sampai n.
+- **Accumulator** `total_baris` digunakan untuk menjumlahkan hasil pada setiap baris, sedangkan `total_semua` digunakan untuk menjumlahkan seluruh hasil perkalian.
+- **Counter** `count_genap` digunakan untuk menghitung banyak hasil perkalian yang genap.
 
-## Testing
+## Hasil Pengujian
 
-| Input | Hasil yang Diharapkan | Hasil Aktual | Status |
+| Input | Hasil yang Diharapkan | Keluaran Aktual | Status |
 |---|---|---|---|
 | n = 1 | Total = 1, hasil genap = 0 | Total = 1, hasil genap = 0 | Berhasil |
 | n = 2 | Total = 9, hasil genap = 3 | Total = 9, hasil genap = 3 | Berhasil |
 | n = 3 | Total = 36, hasil genap = 5 | Total = 36, hasil genap = 5 | Berhasil |
 
-## Efisiensi
+## Analisis Efisiensi
 
-Program menggunakan nested loop dengan kompleksitas waktu O(n²) karena terdapat dua perulangan yang masing-masing berjalan sebanyak n kali.
+Untuk input n, loop luar berjalan sebanyak n kali. Pada setiap iterasi loop luar, loop dalam juga berjalan sebanyak n kali. Jadi, badan loop dalam berjalan sebanyak:
+
+n × n = n² kali.
 
 ## Refleksi
 
-Nested loop digunakan untuk membuat tabel perkalian karena membutuhkan perulangan baris dan kolom. 
-Accumulator digunakan untuk menghitung jumlah hasil pada setiap baris dan total seluruh hasil. 
-Counter digunakan untuk menghitung banyak hasil perkalian yang genap.
+Kesalahan yang perlu diperhatikan pada nested loop adalah salah menempatkan inisialisasi `total_baris`. Jika `total_baris = 0` diletakkan di dalam loop dalam, jumlah setiap baris akan selalu direset sehingga hasilnya salah.
+
+Perbaikannya adalah meletakkan `total_baris = 0` di awal setiap iterasi loop luar, sebelum loop dalam dimulai.
