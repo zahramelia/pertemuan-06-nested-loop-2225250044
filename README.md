@@ -25,11 +25,11 @@ python3 tugas/tabel_perkalian_dan_statistik.py
 
 ## Hasil Pengujian
 
-| Input | Hasil yang Diharapkan | Keluaran Aktual | Status |
-|---|---|---|---|
-| n = 1 | Total = 1, hasil genap = 0 | Total = 1, hasil genap = 0 | Berhasil |
-| n = 2 | Total = 9, hasil genap = 3 | Total = 9, hasil genap = 3 | Berhasil |
-| n = 3 | Total = 36, hasil genap = 5 | Total = 36, hasil genap = 5 | Berhasil |
+| Input | Jumlah Pasangan | Hasil yang Diharapkan | Keluaran Aktual | Status |
+|---|---:|---|---|---|
+| n = 1 | 1 | Total = 1, hasil genap = 0 | Total = 1, hasil genap = 0 | Berhasil |
+| n = 2 | 4 | Total = 9, hasil genap = 3 | Total = 9, hasil genap = 3 | Berhasil |
+| n = 3 | 9 | Total = 36, hasil genap = 5 | Total = 36, hasil genap = 5 | Berhasil |
 
 ## Analisis Efisiensi
 
